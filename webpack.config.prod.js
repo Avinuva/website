@@ -1,0 +1,28 @@
+const cssnano = require("cssnano");
+const merge = require("webpack-merge");
+
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
+const common = require("./webpack.config.common");
+
+module.exports = merge(common, {
+  mode: "production",
+  optimization: {
+    minimize: true
+  },
+  plugins: [
+    new CleanWebpackPlugin(["bundle"]),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
+      chunkFilename: "[id].[contenthash].css"
+    }),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.css$/g,
+      cssProcessor: cssnano,
+      cssProcessorOptions: { discardComments: { removeAll: true } },
+      canPrint: true
+    })
+  ]
+});
