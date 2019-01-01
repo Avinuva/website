@@ -5,7 +5,6 @@ import * as del from "del";
 import * as typescript from "rollup-plugin-typescript";
 import * as postcss from "gulp-postcss";
 import * as sass from "gulp-sass";
-import * as sourcemaps from "gulp-sourcemaps";
 import * as imagemin from "gulp-imagemin";
 import * as browserSync from "browser-sync";
 import * as merge from "gulp-merge";
@@ -29,8 +28,11 @@ export function clean() {
 
 export function copy() {
   return gulp
-    .src(["./source/static/**/*", "./source/pages/*"])
-    .pipe(gulp.dest("./bundle"));
+    .src(["./source/static/**/*", "./source/pages/*"], {
+      since: gulp.lastRun(copy)
+    })
+    .pipe(gulp.dest("./bundle"))
+    .pipe(browserSync.reload({ stream: true }))
 }
 
 export function scripts() {
@@ -61,6 +63,7 @@ export function images() {
 }
 
 function watch() {
+  gulp.watch(["./source/static/**/*", "./source/pages/*"], copy);
   gulp.watch("./source/scripts", scripts);
   gulp.watch("./source/styles", styles);
   gulp.watch("./source/images", images);
