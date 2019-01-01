@@ -162,4 +162,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-/bundle/*
+bundle
