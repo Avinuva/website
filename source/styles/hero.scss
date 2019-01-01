@@ -1,0 +1,27 @@
+.hero {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    color: #fff;
+    aside {
+        margin: auto;
+        margin-right: 0;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+    .social-links {
+        list-style: none;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        display: flex;
+        li {
+            margin: 1em;
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
