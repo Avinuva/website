@@ -1,0 +1,288 @@
+.skills {
+  .index,
+  .nav {
+    display: none;
+  }
+
+  .skill {
+    .skill-content {
+      padding: 2rem;
+    }
+    .skill-title {
+      font-size: 5vw;
+      text-transform: lowercase;
+      margin: 0;
+      letter-spacing: -0.35vw;
+      position: relative;
+      overflow: hidden;
+      span {
+        display: inline-block;
+      }
+    }
+
+    .skill-description {
+      line-height: 1.75;
+      overflow: hidden;
+      position: relative;
+      padding: 0 2rem 0 0;
+      font-weight: 300;
+    }
+
+    .skill-cover {
+      height: 45vh;
+      pointer-events: none;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .skill-projects {
+      padding: 2rem;
+      margin: 0;
+      list-style: none;
+      background: black;
+      color: white;
+      li {
+        margin: 0 0 2.5rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 55em) and (min-height: 40em) {
+  .skills {
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 30% 44% 26%;
+    grid-template-areas:
+      'skills-index ...'
+      '... ...'
+      'skills-nav ...';
+
+    .index {
+      font-weight: bold;
+      font-size: 0.75rem;
+      display: block;
+      align-self: end;
+      padding: 0 4rem 3rem 20%;
+      grid-area: skills-index;
+      display: flex;
+      z-index: 1;
+      .index-current {
+        position: relative;
+        overflow: hidden;
+        .index-inner {
+          display: block;
+          width: 1.15rem;
+        }
+      }
+      .index-total {
+        position: relative;
+        margin: 0 0 0 8rem;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 6rem;
+          height: 3px;
+          top: calc(50% - 1.5px);
+          right: calc(100% + 1rem);
+          background: #000;
+        }
+      }
+    }
+
+    .nav {
+      display: block;
+      grid-area: skills-nav;
+      z-index: 5;
+      padding: 2rem 4rem 0;
+      background: linear-gradient(0deg, #ffffff 90%, rgba(255, 255, 255, 0));
+      button {
+        border: 2px solid #ddd;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        background: #fff;
+        &:hover {
+          border-color: #000;
+        }
+        .icon {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .skill {
+      height: 100vh;
+      pointer-events: none;
+      grid-area: 1 / 1 / 5 / 4;
+      display: grid;
+      grid-template-columns: 47% 25% 28%;
+      grid-template-rows: 39% 39% 22%;
+      grid-template-areas:
+        '... skill-cover skill-cover'
+        'skill-content skill-cover skill-cover'
+        '... skill-cover skill-cover';
+      &.current {
+        pointer-events: auto;
+      }
+      .skill-content {
+        padding: 0 4rem;
+        grid-area: skill-content;
+      }
+      .skill-cover {
+        height: auto;
+        grid-area: skill-cover;
+        overflow: hidden;
+        z-index: 99;
+      }
+      .skill-projects {
+        grid-area: 2 / 2 / 4 / 2;
+        background: black;
+        transform-origin: 0 0;
+        left: -2vw;
+        position: relative;
+        z-index: 100;
+      }
+    }
+  }
+  .js .skill:not(.current) {
+    pointer-events: none;
+    .skill-title span,
+    .skill-description,
+    .skill-cover img,
+    .skill-projects,
+    .skill-projects li {
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 54.9em), screen and (max-height: 39.9em) {
+  .js .skill {
+    pointer-events: none;
+    .skill-title span,
+    .skill-description,
+    .skill-cover img,
+    .skill-projects,
+    .skill-projects li {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+}
+// .js {
+
+// }
+
+// .skills {
+//   width: 100vw;
+//   height: 100vh;
+//   overflow: hidden;
+//   display: grid;
+//   grid-template-columns: 45% 55%;
+//   grid-template-rows: 30% 44% 26%;
+//   grid-template-areas:
+//     'skills-index ...'
+//     '... ...'
+//     'skills-nav ...';
+//   .nav {
+//     display: block;
+//     grid-area: skills-nav;
+//     z-index: 5;
+//     padding: 2rem 4rem 0;
+//     // padding: 0 4rem 3rem 20%;
+//   }
+//   .index {
+//     font-weight: bold;
+//     font-size: 0.75rem;
+//     align-self: end;
+//     padding: 0 4rem 3rem 20%;
+//     grid-area: skills-index;
+//     display: flex;
+//     z-index: 1;
+//     .index-current {
+//       overflow: hidden;
+//       index-inner {
+//         display: block;
+//       }
+//     }
+//     .index-total {
+//       position: relative;
+//       margin: 0 0 0 8rem;
+//       &::after {
+//         content: '';
+//         position: absolute;
+//         width: 6rem;
+//         height: 3px;
+//         top: calc(50% - 1.5px);
+//         right: calc(100% + 1rem);
+//         background: #000;
+//       }
+//     }
+//   }
+//   .skill {
+//     display: grid;
+//     grid-area: 1 / 1 / 5 / 4;
+//     grid-template-columns: 55% 20% 25%;
+//     grid-template-rows: 40% 40% 20%;
+//     grid-template-areas:
+//       '... skill-cover skill-cover'
+//       'skill-content skill-cover skill-cover'
+//       '... skill-cover skill-cover';
+//     overflow: hidden;
+
+//     .skill-cover {
+//       grid-area: skill-cover;
+//       overflow: hidden;
+//       height: 100vh;
+//       // background: red;
+//       img {
+//         // display: none;
+//         height: 100%;
+//         width: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//     .skill-content {
+//       grid-area: skill-content;
+//       padding: 0 4rem;
+//       h2 {
+//         font-size: 7vw;
+//         text-transform: lowercase;
+//         margin: 0;
+//         letter-spacing: -0.35vw;
+//         position: relative;
+//         overflow: hidden;
+//         white-space: nowrap;
+//         span {
+//           display: inline-block;
+//         }
+//       }
+//       p {
+//         line-height: 1.75;
+//         overflow: hidden;
+//         position: relative;
+//         padding: 0 2rem 0 0;
+//         font-weight: 300;
+//       }
+//     }
+//     .skill-projects {
+//       background: #000;
+//       color: white;
+//       list-style: none;
+//       padding: 5vh 5vw;
+//       pointer-events: none;
+//       position: relative;
+//       z-index: 200;
+//       grid-area: 2 / 2 / 4 / 2;
+//       left: -2vw;
+//       bottom: -10vh;
+//       margin: 0;
+//     }
+//   }
+// }
