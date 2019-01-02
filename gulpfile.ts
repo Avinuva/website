@@ -1,25 +1,29 @@
-import gulp from 'gulp'
-import { rollup } from 'rollup'
-import source from 'vinyl-source-stream'
+import path from 'path'
+import glob from 'glob'
 import del from 'del'
-import typescript from 'rollup-plugin-typescript'
+import gulp from 'gulp'
 import postcss from 'gulp-postcss'
 import sass from 'gulp-sass'
 import imagemin from 'gulp-imagemin'
 import browserSync from 'browser-sync'
-import merge from 'gulp-merge'
-import glob from 'glob'
-import path from 'path'
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
+import { rollup } from 'rollup'
 
 sass.compiler = require('node-sass')
 
+const postCSSPlugins = [
+  require('autoprefixer')(),
+  require('postcss-preset-env')(),
+]
+if (process.env.PRODUCTION) {
+  postCSSPlugins.push(
+    require('cssnano')()
+  )
+}
 export function styles() {
   return gulp
     .src('./source/styles/*.scss')
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-    .pipe(postcss())
+    .pipe(postcss(postCSSPlugins))
     .pipe(gulp.dest('./bundle/assets/styles'))
     .pipe(browserSync.reload({ stream: true }))
 }
@@ -37,20 +41,25 @@ export function copy() {
     .pipe(browserSync.reload({ stream: true }))
 }
 
+const rollupPlugins = [
+  require('rollup-plugin-typescript')(),
+  require('rollup-plugin-node-resolve')(),
+  require('rollup-plugin-commonjs')(),
+]
+if (process.env.PRODUCTION) {
+  rollupPlugins.push(
+    require('rollup-plugin-uglify').uglify()
+  )
+}
 export function scripts() {
   return Promise.all(
-    glob.sync('./source/scripts/*.ts').map(entry => {
-      return rollup({
-        input: entry,
-        plugins: [resolve(), commonjs(), typescript()],
-      }).then(bundle => {
-        return bundle
-          .write({
-            file: `./bundle/assets/scripts/${path.basename(entry, '.ts')}.js`,
-            format: 'iife',
-          })
-          .then(() => browserSync.reload())
+    glob.sync('./source/scripts/*.ts').map(async entry => {
+      const bundle = await rollup({ input: entry, plugins: rollupPlugins })
+      await bundle.write({
+        file: `./bundle/assets/scripts/${path.basename(entry, '.ts')}.js`,
+        format: 'iife',
       })
+      browserSync.reload()
     })
   )
 }
@@ -79,7 +88,7 @@ function watch() {
 
 function createServer(done) {
   browserSync({
-    browser: "google chrome",
+    browser: 'google chrome',
     server: {
       baseDir: './bundle',
     },
