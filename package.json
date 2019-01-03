@@ -7,9 +7,11 @@
   "scripts": {},
   "devDependencies": {
     "@types/animejs": "^2.0.1",
+    "@types/cheerio": "^0.22.10",
     "@types/node": "^10.12.18",
     "autoprefixer": "^9.4.3",
     "browser-sync": "^2.26.3",
+    "cheerio": "^1.0.0-rc.2",
     "cssnano": "^4.1.8",
     "del": "^3.0.0",
     "glob": "^7.1.3",
