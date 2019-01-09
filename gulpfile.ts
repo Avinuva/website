@@ -7,7 +7,6 @@ import sass from 'gulp-sass'
 import imagemin from 'gulp-imagemin'
 import browserSync from 'browser-sync'
 import { rollup } from 'rollup'
-import cheerio from 'cheerio'
 
 sass.compiler = require('node-sass')
 
@@ -15,22 +14,11 @@ const postCSSPlugins = [
   require('autoprefixer')(),
   require('postcss-preset-env')(),
 ]
+
 if (process.env.PRODUCTION) {
   postCSSPlugins.push(require('cssnano')())
 }
 
-export function test() {
-    var fs = require('fs');
-    fs.readFile('./source/pages/index.html', 'utf8', function(err, contents) {
-        const $ = cheerio.load(contents)
-        // console.log($('link'));
-        let atrs = $('script').map((_, e)=> console.log(e.attribs['src']));
-
-    });
-    return gulp
-    .src('./source/styles/*.scss')
-    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-}
 export function styles() {
   return gulp
     .src('./source/styles/*.scss')
