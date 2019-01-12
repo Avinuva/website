@@ -3,6 +3,7 @@ import glob from 'glob'
 import del from 'del'
 import gulp from 'gulp'
 import postcss from 'gulp-postcss'
+import sourcemaps from 'gulp-sourcemaps'
 import sass from 'gulp-sass'
 import imagemin from 'gulp-imagemin'
 import browserSync from 'browser-sync'
@@ -22,7 +23,9 @@ if (process.env.PRODUCTION) {
 export function styles() {
   return gulp
     .src('./source/styles/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(postcss(postCSSPlugins))
     .pipe(gulp.dest('./bundle/assets/styles'))
     .pipe(browserSync.reload({ stream: true }))
@@ -56,6 +59,7 @@ export function scripts() {
       await bundle.write({
         file: `./bundle/assets/scripts/${path.basename(entry, '.ts')}.js`,
         format: 'iife',
+        sourcemap: true
       })
       browserSync.reload()
     })
