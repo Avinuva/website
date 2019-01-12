@@ -1,0 +1,28 @@
+.gallery {
+  display: grid;
+  width: calc(100% - 6em);
+  height: calc(100vh - 6em);
+  grid-auto-rows: calc((calc(100vh - 6em) / 30) - 10px);
+  grid-auto-columns: calc((calc(100% - 6em) / 30) - 10px);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+  pointer-events: none;
+  .no-js & {
+    margin: 0 0 15vh;
+  }
+  .js & {
+    // position: absolute;
+    // top: 3em;
+    // left: 3em;
+    opacity: 0;
+    &.is-current {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+@import './layouts/layout-1.scss';
+@import './layouts/layout-2.scss';
+@import './layouts/layout-3.scss';

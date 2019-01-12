@@ -47,19 +47,14 @@ export default class {
   }
   toggle(dir: Direction) {
     this.direction = dir
-    return Promise.all([
-      this.toggleTitle(),
-      this.toggleDescription(),
-      this.toggleProjects(),
-      this.toggleCover(),
-    ])
+    return Promise.all([this.toggleTitle(), this.toggleDescription(), this.toggleProjects(), this.toggleCover()])
   }
   toggleTitle() {
     anime.remove(this.DOM.titleLetters)
     return anime({
       targets: this.DOM.titleLetters,
       duration: settings.title.duration,
-      delay: (_, index) => index * 30 + settings.title.delay,
+      delay: anime.stagger(30, { start: settings.title.delay }),
       easing: settings.title.easing,
       translateY: this.isHidden
         ? [0, this.direction === 'next' ? '-100%' : '100%']
@@ -67,10 +62,7 @@ export default class {
       opacity: {
         value: this.isHidden ? 0 : 1,
         duration: 1,
-        delay: () =>
-          this.isHidden
-            ? settings.title.duration + settings.title.delay
-            : settings.title.delay,
+        delay: () => (this.isHidden ? settings.title.duration + settings.title.delay : settings.title.delay),
       },
     }).finished
   }
@@ -99,9 +91,7 @@ export default class {
         duration: settings.projects.duration,
         delay: (_, index) => {
           return !this.isHidden
-            ? index * 40 +
-                settings.projects.duration * 0.5 +
-                settings.projects.delay
+            ? index * 40 + settings.projects.duration * 0.5 + settings.projects.delay
             : index * 40 + settings.projects.delay
         },
         easing: settings.projects.easing,
@@ -116,13 +106,11 @@ export default class {
         delay: 500,
         easing: settings.projects.easing,
         opacity: this.isHidden ? 0 : 1,
-      }).finished
+      }).finished,
     ])
   }
   toggleCover() {
-    this.DOM.cover.style.transformOrigin = !this.isHidden
-      ? `50% ${this.direction === 'next' ? 0 : 100}%`
-      : `50% 50%`
+    this.DOM.cover.style.transformOrigin = !this.isHidden ? `50% ${this.direction === 'next' ? 0 : 100}%` : `50% 50%`
     anime.remove(this.DOM.cover)
     return anime({
       targets: this.DOM.cover,
@@ -136,9 +124,7 @@ export default class {
       opacity: {
         value: this.isHidden ? 0 : 1,
         duration: 1,
-        delay: this.isHidden
-          ? settings.cover.duration + settings.cover.delay
-          : settings.cover.delay,
+        delay: this.isHidden ? settings.cover.duration + settings.cover.delay : settings.cover.delay,
       },
     }).finished
   }

@@ -8,14 +8,14 @@ import scripts from './build/tasks/scripts'
 import markups from './build/tasks/markups'
 import statics from './build/tasks/statics'
 
-import { outputs, inputs } from './build/gulpconfig'
+import { outputs, inputs, watches } from './build/gulp.config'
 
 function watch() {
-  gulp.watch(inputs.statics, statics)
-  gulp.watch(inputs.markups, markups)
-  gulp.watch(inputs.scripts, scripts)
-  gulp.watch(inputs.styles, styles)
-  gulp.watch(inputs.images, images)
+  gulp.watch(watches.statics, statics)
+  gulp.watch(watches.markups, markups)
+  gulp.watch(watches.scripts, scripts)
+  gulp.watch(watches.styles, styles)
+  gulp.watch(watches.images, images)
 }
 
 function server() {

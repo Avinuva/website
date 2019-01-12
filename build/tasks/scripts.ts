@@ -8,7 +8,7 @@ import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import { uglify } from 'rollup-plugin-uglify'
 
-import { isProduction, inputs, outputs } from '../gulpconfig'
+import { isProduction, inputs, outputs } from '../gulp.config'
 
 const plugins = [typescript(), resolve(), commonjs()]
 

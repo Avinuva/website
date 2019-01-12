@@ -1,7 +1,7 @@
 import gulp from 'gulp'
 import browserSync from 'browser-sync'
 
-import { inputs, outputs } from '../gulpconfig'
+import { inputs, outputs } from '../gulp.config'
 
 export default function statics() {
   return gulp

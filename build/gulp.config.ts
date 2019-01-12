@@ -21,3 +21,11 @@ export const outputs = {
   styles: './bundle/assets/styles',
   images: './bundle/assets/images',
 }
+
+export const watches = {
+  statics: './source/static/**/*',
+  markups: './source/pages/*',
+  scripts: './source/scripts/**/*.ts',
+  styles: './source/styles/**/*.scss',
+  images: './source/images/*.{jpg,jpeg,png}',
+}

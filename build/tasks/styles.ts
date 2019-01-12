@@ -9,7 +9,7 @@ import autoprefixer from 'autoprefixer'
 import presetEnv from 'postcss-preset-env'
 import cssnano from 'cssnano'
 
-import { isProduction } from '../gulpconfig'
+import { isProduction } from '../gulp.config'
 
 const plugins = [autoprefixer(), presetEnv()]
 

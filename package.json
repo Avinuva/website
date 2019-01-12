@@ -6,7 +6,6 @@
   "author": "Mohamed Meftah <mohamed-ted@live.com>",
   "scripts": {},
   "devDependencies": {
-    "@types/animejs": "^2.0.1",
     "@types/autoprefixer": "^9.1.1",
     "@types/browser-sync": "^0.0.42",
     "@types/cheerio": "^0.22.10",

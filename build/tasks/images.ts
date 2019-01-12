@@ -2,7 +2,7 @@ import gulp from 'gulp'
 import gulpif from 'gulp-if'
 import imagemin from 'gulp-imagemin'
 
-import { isProduction, inputs, outputs } from '../gulpconfig'
+import { isProduction, inputs, outputs } from '../gulp.config'
 
 export default function images() {
   return gulp
