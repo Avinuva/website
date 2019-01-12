@@ -14,10 +14,10 @@ type DOM = {
   }
 }
 const settings = {
-  title: { duration: 700, delay: 200, easing: [0.8, 0, 0.2, 1] },
+  title: { duration: 700, delay: 200, easing: 'cubicBezier(0.8, 0, 0.2, 1)' },
   description: { duration: 900, delay: 400, easing: 'easeOutExpo' },
-  projects: { duration: 300, delay: 0, easing: [0.8, 0, 0.2, 1] },
-  cover: { duration: 900, delay: 0, easing: [0.8, 0, 0.2, 1] },
+  projects: { duration: 300, delay: 0, easing: 'cubicBezier(0.8, 0, 0.2, 1)' },
+  cover: { duration: 900, delay: 0, easing: 'cubicBezier(0.8, 0, 0.2, 1)' },
 }
 
 export default class {

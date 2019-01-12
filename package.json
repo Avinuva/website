@@ -35,7 +35,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "animejs": "^2.2.0",
+    "animejs": "^3.0.0",
     "charming": "^2.2.4",
     "imagesloaded": "^4.1.4"
   }

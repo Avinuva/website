@@ -133,10 +133,10 @@ amdefine@>=0.0.4:
   resolved "https://npm.cwserve.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
-animejs@^2.2.0:
-  version "2.2.0"
-  resolved "https://npm.cwserve.com/animejs/-/animejs-2.2.0.tgz#35eefdfc535b81949c9cb06f0b3e60c02e6fdc80"
-  integrity sha1-Ne79/FNbgZScnLBvCz5gwC5v3IA=
+animejs@^3.0.0:
+  version "3.0.0"
+  resolved "https://npm.cwserve.com/animejs/-/animejs-3.0.0.tgz#6b0fb87fbd0b13128b35fe8e790b1671ae7b825d"
+  integrity sha512-YL2+GpjoDYM7hqKpJoh+vhXYNiE0klkgUlDl3m+wCuXh9QJF++/KIT2SQYkBkVhxk/GLlFsqI5I/ogWN4pBQSA==
 
 ansi-colors@^1.0.1:
   version "1.1.0"
@@ -684,12 +684,12 @@ browser-sync@^2.26.3:
     yargs "6.4.0"
 
 browserslist@^4.0.0, browserslist@^4.3.5, browserslist@^4.3.7:
-  version "4.3.7"
-  resolved "https://npm.cwserve.com/browserslist/-/browserslist-4.3.7.tgz#f1de479a6466ea47a0a26dcc725e7504817e624a"
-  integrity sha512-pWQv51Ynb0MNk9JGMCZ8VkM785/4MQNXiFYtPqI7EEP0TJO+/d/NqRVn1uiAN0DNbnlUSpL2sh16Kspasv3pUQ==
+  version "4.4.0"
+  resolved "https://npm.cwserve.com/browserslist/-/browserslist-4.4.0.tgz#7050d1412cbfc5274aba609ed5e50359ca1a5fdf"
+  integrity sha512-tQkHS8VVxWbrjnNDXgt7/+SuPJ7qDvD0Y2e6bLtoQluR2SPvlmPUcfcU75L1KAalhqULlIFJlJ6BDfnYyJxJsw==
   dependencies:
-    caniuse-lite "^1.0.30000925"
-    electron-to-chromium "^1.3.96"
+    caniuse-lite "^1.0.30000928"
+    electron-to-chromium "^1.3.100"
     node-releases "^1.1.3"
 
 bs-recipes@1.3.4:
@@ -844,10 +844,10 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000918, caniuse-lite@^1.0.30000925, caniuse-lite@^1.0.30000926:
-  version "1.0.30000927"
-  resolved "https://npm.cwserve.com/caniuse-lite/-/caniuse-lite-1.0.30000927.tgz#114a9de4ff1e01f5790fe578ecd93421c7524665"
-  integrity sha512-ogq4NbUWf1uG/j66k0AmiO3GjqJAlQyF8n4w8a954cbCyFKmYGvRtgz6qkq2fWuduTXHibX7GyYL5Pg58Aks2g==
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000918, caniuse-lite@^1.0.30000926, caniuse-lite@^1.0.30000928:
+  version "1.0.30000928"
+  resolved "https://npm.cwserve.com/caniuse-lite/-/caniuse-lite-1.0.30000928.tgz#805e828dc72b06498e3683a32e61c7507fd67b88"
+  integrity sha512-aSpMWRXL6ZXNnzm8hgE4QDLibG5pVJ2Ujzsuj3icazlIkxXkPXtL+BWnMx6FBkWmkZgBHGUxPZQvrbRw2ZTxhg==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -1773,7 +1773,7 @@ ee-first@1.1.1:
   resolved "https://npm.cwserve.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-electron-to-chromium@^1.3.96:
+electron-to-chromium@^1.3.100:
   version "1.3.100"
   resolved "https://npm.cwserve.com/electron-to-chromium/-/electron-to-chromium-1.3.100.tgz#899fb088def210aee6b838a47655bbb299190e13"
   integrity sha512-cEUzis2g/RatrVf8x26L8lK5VEls1AGnLHk6msluBUg/NTB4wcXzExTsGscFq+Vs4WBBU2zbLLySvD4C0C3hwg==
@@ -4776,12 +4776,12 @@ posix-character-classes@^0.1.0:
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
 postcss-attribute-case-insensitive@^4.0.0:
-  version "4.0.0"
-  resolved "https://npm.cwserve.com/postcss-attribute-case-insensitive/-/postcss-attribute-case-insensitive-4.0.0.tgz#807b6a797ad8bf1c821b2d51cf641e9dd3837624"
-  integrity sha512-K/zqdg0/UgUgC8qR0lDuxYzmowPpnvrrNC5YuoqzhHMubR9AuhsPlpVu3jjkLHgDAzR+ohD/m7//iGnN9WxbzQ==
+  version "4.0.1"
+  resolved "https://npm.cwserve.com/postcss-attribute-case-insensitive/-/postcss-attribute-case-insensitive-4.0.1.tgz#b2a721a0d279c2f9103a36331c88981526428cc7"
+  integrity sha512-L2YKB3vF4PetdTIthQVeT+7YiSzMoNMLLYxPXXppOOP7NoazEAy45sh2LvJ8leCQjfBcfkYQs8TtCcQjeZTp8A==
   dependencies:
     postcss "^7.0.2"
-    postcss-selector-parser "^5.0.0-rc.3"
+    postcss-selector-parser "^5.0.0"
 
 postcss-calc@^7.0.0:
   version "7.0.1"
@@ -5288,7 +5288,7 @@ postcss-selector-parser@^3.0.0:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-selector-parser@^5.0.0-rc.3, postcss-selector-parser@^5.0.0-rc.4:
+postcss-selector-parser@^5.0.0, postcss-selector-parser@^5.0.0-rc.3, postcss-selector-parser@^5.0.0-rc.4:
   version "5.0.0"
   resolved "https://npm.cwserve.com/postcss-selector-parser/-/postcss-selector-parser-5.0.0.tgz#249044356697b33b64f1a8f7c80922dddee7195c"
   integrity sha512-w+zLE5Jhg6Liz8+rQOWEAwtwkyqpfnmsinXjXg6cY7YIONZZtgvE0v2O0uhQBs0peNomOJwWRKt6JBfTdTd3OQ==
@@ -5331,13 +5331,13 @@ postcss-values-parser@^2.0.0:
     uniq "^1.0.1"
 
 postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.2, postcss@^7.0.5, postcss@^7.0.6, postcss@^7.0.7:
-  version "7.0.8"
-  resolved "https://npm.cwserve.com/postcss/-/postcss-7.0.8.tgz#2a3c5f2bdd00240cd0d0901fd998347c93d36696"
-  integrity sha512-WudsIzuTKRw9IInRTPBgVXJ7DKR26HT09Rxp0g3w0Fqh3TUtYICcUmvC0xURj04o3vdcDtnjCAUCECg/p341iQ==
+  version "7.0.9"
+  resolved "https://npm.cwserve.com/postcss/-/postcss-7.0.9.tgz#e35e450ce112810a5435ffe49313a67186a6fe1c"
+  integrity sha512-eXB2Fm8/BtSABq7ia1HyvbkoD9zFqq2BWjHUAyRSgbK8qdyKrA6yMCX06l05Onc8bHemeXLB8hzJ8tM0ABc0Zw==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
-    supports-color "^6.0.0"
+    supports-color "^6.1.0"
 
 prepend-http@^1.0.1:
   version "1.0.4"
@@ -5766,9 +5766,9 @@ rollup-plugin-typescript@^1.0.0:
     rollup-pluginutils "^2.3.1"
 
 rollup-plugin-uglify@^6.0.0:
-  version "6.0.0"
-  resolved "https://npm.cwserve.com/rollup-plugin-uglify/-/rollup-plugin-uglify-6.0.0.tgz#15aa8919e5cdc63b7cfc9319c781788b40084ce4"
-  integrity sha512-XtzZd159QuOaXNvcxyBcbUCSoBsv5YYWK+7ZwUyujSmISst8avRfjWlp7cGu8T2O52OJnpEBvl+D4WLV1k1iQQ==
+  version "6.0.1"
+  resolved "https://npm.cwserve.com/rollup-plugin-uglify/-/rollup-plugin-uglify-6.0.1.tgz#f8d8e0309104af33981ec0956670b0bd7fac75f5"
+  integrity sha512-Mo4fFTof41Ij401wGl7rJxir8b/I9fHfaNeLi9FQAa8aFatQdmvoWR5nEixTmdk8ycbB8p1owYGru+g+cvrH0Q==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     jest-worker "^23.2.0"
@@ -6141,9 +6141,9 @@ source-map-resolve@^0.5.0, source-map-resolve@^0.5.2:
     urix "^0.1.0"
 
 source-map-support@^0.5.6:
-  version "0.5.9"
-  resolved "https://npm.cwserve.com/source-map-support/-/source-map-support-0.5.9.tgz#41bc953b2534267ea2d605bccfa7bfa3111ced5f"
-  integrity sha512-gR6Rw4MvUlYy83vP0vxoVNzM6t8MUXqNuRsuBmBHQDu1Fh6X015FrLdgoDKcNdkwGubozq0P4N0Q37UyFVr1EA==
+  version "0.5.10"
+  resolved "https://npm.cwserve.com/source-map-support/-/source-map-support-0.5.10.tgz#2214080bc9d51832511ee2bab96e3c2f9353120c"
+  integrity sha512-YfQ3tQFTK/yzlGJuX8pTwa4tifQj4QS2Mj7UegOu8jAz59MqIiMGPXxQhVQiIMNzayuUSF/jEuVnfFF5JqybmQ==
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
@@ -6419,10 +6419,10 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
-supports-color@^6.0.0:
-  version "6.0.0"
-  resolved "https://npm.cwserve.com/supports-color/-/supports-color-6.0.0.tgz#76cfe742cf1f41bb9b1c29ad03068c05b4c0e40a"
-  integrity sha512-on9Kwidc1IUQo+bQdhi8+Tijpo0e1SS6RoGo2guUwn5vdaxw8RXOF9Vb2ws+ihWOmh4JnCJOvaziZWP1VABaLg==
+supports-color@^6.1.0:
+  version "6.1.0"
+  resolved "https://npm.cwserve.com/supports-color/-/supports-color-6.1.0.tgz#0764abc69c63d5ac842dd4867e8d025e880df8f3"
+  integrity sha512-qe1jfm1Mg7Nq/NSh6XE24gPXROEVsWHxC1LIx//XNlD9iw7YZQGjZNjYN7xGaEG6iKdA8EtNFW6R0gjnVXp+wQ==
   dependencies:
     has-flag "^3.0.0"
 
