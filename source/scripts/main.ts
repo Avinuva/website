@@ -1,5 +1,5 @@
-import Slideshow from './modules/Slideshow'
+import SkillsSlideshow from './modules/SkillsSlideshow'
 
 window.onload = function() {
-  new Slideshow(document.querySelector('.skills'))
+  new SkillsSlideshow(document.querySelector('.hero > .skills'))
 }

@@ -7,7 +7,7 @@ export const isProduction = args.production
 export const inputs = {
   source: './source',
   statics: './source/static/**/*',
-  markups: './source/pages/*',
+  markups: './source/pages/*.pug',
   scripts: './source/scripts/*.ts',
   styles: './source/styles/*.scss',
   images: './source/images/*.{jpg,jpeg,png}',
@@ -24,7 +24,7 @@ export const outputs = {
 
 export const watches = {
   statics: './source/static/**/*',
-  markups: './source/pages/*',
+  markups: './source/pages/**/*.pug',
   scripts: './source/scripts/**/*.ts',
   styles: './source/styles/**/*.scss',
   images: './source/images/*.{jpg,jpeg,png}',

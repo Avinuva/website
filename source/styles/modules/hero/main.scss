@@ -1,0 +1,26 @@
+.hero {
+  .intro {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.6vw;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  @media screen and (min-width: 55em) {
+    height: 100vh;
+    display: flex;
+    padding: 0 5vw;
+    align-items: center;
+    .intro {
+      width: 60%;
+      order: 2;
+      margin: 0;
+      margin-left: 5vw;
+      margin-top: -3.19em;
+    }
+    .skills {
+      width: 40%;
+      order: 1;
+    }
+  }
+  @import './skills.scss';
+}

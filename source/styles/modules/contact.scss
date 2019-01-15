@@ -2,4 +2,10 @@
     height: 100vh;
     background: url('/assets/images/office.jpg');
     background-size: cover;
+    padding-top: 10vh;
+    padding-left: 10vw;
+    .wrapper {
+      background: #fff;
+      height: 100%;
+    }
 }
