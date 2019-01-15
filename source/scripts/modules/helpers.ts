@@ -5,3 +5,7 @@ export const debounce = (fn, time) => {
         timeout = setTimeout(() => fn.apply(this, args), time)
     }
 }
+
+export const throttle = (fn, time) => {
+
+}
