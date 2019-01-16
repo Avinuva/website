@@ -1,8 +1,18 @@
 import anime from 'animejs'
 import SkillsSlideshow from './modules/SkillsSlideshow'
-import { debounce } from './modules/helpers'
+import Rellax from 'rellax'
 window.onload = function() {
   new SkillsSlideshow(document.querySelector('.hero > .skills'))
+
+  var rellax = new Rellax('[data-rellax-speed]', {
+    speed: -2,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+  });
+
   document.querySelectorAll('[data-parallax]').forEach($el => {
     let timeline = anime.timeline({ autoplay: false })
     let properties = JSON.parse(($el as HTMLElement).dataset.parallax)

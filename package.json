@@ -51,6 +51,7 @@
   "dependencies": {
     "animejs": "^3.0.0",
     "charming": "^2.2.4",
-    "imagesloaded": "^4.1.4"
+    "imagesloaded": "^4.1.4",
+    "rellax": "^1.7.2"
   }
 }

@@ -6101,6 +6101,11 @@ regex-not@^1.0.0, regex-not@^1.0.2:
     extend-shallow "^3.0.2"
     safe-regex "^1.1.0"
 
+rellax@^1.7.2:
+  version "1.7.2"
+  resolved "https://npm.cwserve.com/rellax/-/rellax-1.7.2.tgz#390007b1939050929951781f869098f00529a395"
+  integrity sha512-4/q777omp87RakCEkV/+UtPfewZC6AfHDFJEM9tDkmyAj/Y5ia/hf41d2b5p8vr9k/ozjqnxt8tny4kCeTPhzA==
+
 remove-bom-buffer@^3.0.0:
   version "3.0.0"
   resolved "https://npm.cwserve.com/remove-bom-buffer/-/remove-bom-buffer-3.0.0.tgz#c2bf1e377520d324f623892e33c10cac2c252b53"

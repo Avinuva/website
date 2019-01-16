@@ -12,49 +12,12 @@ html(lang="en")
     script(src="assets/scripts/polyfill.js")
     title Netulip
   body
-    <header><h1>Netulip</h1></header>
+    header
+      h1 Netulip
     include ./partials/hero.pug
-    .projects
-        div(data-parallax='{"translateY": [0, -100], "opacity": [0, 1]}')
-        div(data-parallax='{"translateY": [0, -100], "opacity": [0, 1]}')
-        div(data-parallax='{"translateY": [0, -100], "opacity": [0, 1]}')
-        div(data-parallax='{"translateY": [0, -50], "opacity": [0, 1]}')
-        div(data-parallax='{"translateY": [0, -50], "opacity": [0, 1]}')
-        div(data-parallax='{"translateY": [0, -50], "opacity": [0, 1]}')
-        div(data-parallax='{"translateY": [0, -100], "opacity": [0, 1]}')
-        div(data-parallax='{"translateY": [0, -100], "opacity": [0, 1]}')
-        div(data-parallax='{"translateY": [0, -100], "opacity": [0, 1]}')
-    section.services
-      h4 services
-      p We are an agency founded through a belief that bold challenging creativity supported by strategic thinking can make a big impact in a modern world.
-      ul
-        li Branding
-        li Strategy
-        li Visual Identity
-        li Packaging
-        li Digital
-        li UX/UI
-        li Creative devlopement
-        li Interactive design
-        li Film & Animation
-        li Advertising
-        li Social
-    section
-      h3 Work together
-      form
-    section.contact
-      .wrapper
-        h3 Contact Us
-        p Or come and drink coffee in comfy place
-        ul
-          li
-            .address
-              span.label Main address:
-              span.street 38 avenue de l'Opera
-              span.zipcode F-75002
-              span.locality Paris, France
-              span.telephone Tel: (331) 42 68 53 00
-              span.fax Fax: (331) 42 68 53 01
+    include ./partials/porjects.pug
+    include ./partials/services.pug
+    include ./partials/contact.pug
     script(src="assets/scripts/main.js")
 
 
