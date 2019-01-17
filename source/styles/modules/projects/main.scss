@@ -1,3 +1,11 @@
+@import "../mixins.scss";
+
+body {
+  &, * {
+    transform-style: preserve-3d;
+  }
+}
+
 .projects {
   padding: 10vw 5vw 5vw;
   justify-content: space-between;
@@ -7,9 +15,19 @@
   // grid-auto-flow: column;
   grid-template-rows: repeat(3, 20vw);
   grid-gap: 10vw;
+  perspective: 20px;
   & > .project {
     position: relative;
     margin: 0;
+    &:nth-child(3) {
+      @include parallax(.2, 20px);
+    }
+    &:nth-child(2) {
+      @include parallax(.3, 20px);
+    }
+    &:nth-child(1) {
+      @include parallax(.1, 20px);
+    }
     img {
       width: 100%;
       height: 100%;
@@ -17,6 +35,7 @@
     }
     .title {
       margin: 0;
+      @include parallax(50, 20)
     }
     .category {
       font-size: 1.5rem;

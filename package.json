@@ -2,7 +2,7 @@
   "name": "website",
   "version": "1.0.0",
   "private": true,
-  "repository": "git@github.com:netulip/website.git",
+  "repository": "git@github.com:netulip/website-frontend.git",
   "author": "Mohamed Meftah <mohamed-ted@live.com>",
   "scripts": {},
   "devDependencies": {
@@ -24,6 +24,7 @@
     "cheerio": "^1.0.0-rc.2",
     "cssnano": "^4.1.8",
     "del": "^3.0.0",
+    "dotenv": "^6.2.0",
     "glob": "^7.1.3",
     "gulp": "^4.0.0",
     "gulp-if": "^2.0.2",

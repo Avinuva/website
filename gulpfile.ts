@@ -10,6 +10,9 @@ import statics from './build/tasks/statics'
 
 import { outputs, inputs, watches } from './build/gulp.config'
 
+export { default as publish } from './build/tasks/publish'
+require('dotenv').config()
+
 function watch() {
   gulp.watch(watches.statics, statics)
   gulp.watch(watches.markups, markups)

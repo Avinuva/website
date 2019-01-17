@@ -1,0 +1,4 @@
+@mixin parallax($distance: 0, $perspective: 1) {
+  transform: translateZ($distance * $perspective * 1px) scale(abs($distance - 1));
+  z-index: $distance * 1000;
+}
