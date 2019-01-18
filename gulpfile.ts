@@ -11,6 +11,7 @@ import statics from './build/tasks/statics'
 import { outputs, inputs, watches } from './build/gulp.config'
 
 export { default as publish } from './build/tasks/publish'
+export { default as deploy } from './build/tasks/deploy'
 require('dotenv').config()
 
 function watch() {

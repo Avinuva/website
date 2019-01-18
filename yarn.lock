@@ -295,10 +295,32 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
+"@types/ssh2-streams@*":
+  version "0.1.4"
+  resolved "https://npm.cwserve.com/@types%2fssh2-streams/-/ssh2-streams-0.1.4.tgz#d4ce610c5e03a4710ae90a1dba82f1eea4d386bf"
+  integrity sha512-S4CXFWMnzoEqeX3MSCMAzfYLiMNOyEh0mPXZbaIZWyjFefZAC1mzVj0kIJNMM88LQ3LaVZLbm09GVLJAMpiwbw==
+  dependencies:
+    "@types/node" "*"
+
+"@types/ssh2@^0.5.37":
+  version "0.5.37"
+  resolved "https://npm.cwserve.com/@types%2fssh2/-/ssh2-0.5.37.tgz#59bdcce094925cf70f505f11c5ba0eb2f34843f7"
+  integrity sha512-f6vjGBEgiH8rqJOVIoKU++Kf1U+BoDkCR6JjYB7MZISTdaK9ZfsF/rgPlLCQjTiKhT7ApUgiLfHYEIitexdIVA==
+  dependencies:
+    "@types/node" "*"
+    "@types/ssh2-streams" "*"
+
 "@types/svgo@*":
   version "1.0.1"
   resolved "https://npm.cwserve.com/@types%2fsvgo/-/svgo-1.0.1.tgz#6095fc0119febcf5920ed9cdacdcc0a0d026e4a5"
   integrity sha512-tV+xgQS8v4McSQqk+tGDCwTT1Bo/QLqgRPS1M9UgNZHK2cTf6CdwzxcMG7YAQwd/ZPUNgfgvN7tfe4OUv077Lw==
+
+"@types/tar@^4.0.0":
+  version "4.0.0"
+  resolved "https://npm.cwserve.com/@types%2ftar/-/tar-4.0.0.tgz#e3239d969eeb693a012200613860d0eb871c94f0"
+  integrity sha512-YybbEHNngcHlIWVCYsoj7Oo1JU9JqONuAlt1LlTH/lmL8BMhbzdFUgReY87a05rY1j8mfK47Del+TCkaLAXwLw==
+  dependencies:
+    "@types/node" "*"
 
 "@types/undertaker-registry@*":
   version "1.0.1"
@@ -629,7 +651,7 @@ asap@~2.0.3:
   resolved "https://npm.cwserve.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
 
-asn1@~0.2.3:
+asn1@~0.2.0, asn1@~0.2.3:
   version "0.2.4"
   resolved "https://npm.cwserve.com/asn1/-/asn1-0.2.4.tgz#8d2475dfab553bb33e77b54e59e880bb8ce23136"
   integrity sha512-jxwzQpLQjSmWXgwaCZE9Nz+glAG01yF1QnWgbhGwHI5A6FRIEY6IVqtHhIepHqI7/kyEyQEagBC5mBEFlIYvdg==
@@ -809,7 +831,7 @@ batch@0.6.1:
   resolved "https://npm.cwserve.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
   integrity sha1-3DQxT05nkxgJP8dgJyUl+UvyXBY=
 
-bcrypt-pbkdf@^1.0.0:
+bcrypt-pbkdf@^1.0.0, bcrypt-pbkdf@^1.0.2:
   version "1.0.2"
   resolved "https://npm.cwserve.com/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.2.tgz#a4301d389b6a43f9b67ff3ca11a3f6637e360e9e"
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
@@ -6849,6 +6871,22 @@ squeak@^1.0.0:
     console-stream "^0.1.1"
     lpad-align "^1.0.1"
 
+ssh2-streams@~0.4.2:
+  version "0.4.2"
+  resolved "https://npm.cwserve.com/ssh2-streams/-/ssh2-streams-0.4.2.tgz#bac0d18727396d16049f5f0c8517a46516b45719"
+  integrity sha512-2rSj3oTIJnbAIzR3+XwIYef9wCOVrPQZNLL+fFPPjnPxf09tKkAbgrlYgh/1qynBTz65AUOS+s1zuko4M/GKCw==
+  dependencies:
+    asn1 "~0.2.0"
+    bcrypt-pbkdf "^1.0.2"
+    streamsearch "~0.1.2"
+
+ssh2@^0.8.2:
+  version "0.8.2"
+  resolved "https://npm.cwserve.com/ssh2/-/ssh2-0.8.2.tgz#f7a172458d3a7a13d520438264f90de8a3ee72af"
+  integrity sha512-oaXu7faddvPFGavnLBkk0RFwLXvIzCPq6KqAC3ExlnFPAVIE1uo7pWHe9xmhNHXm+nIe7yg9qsssOm+ip2jijw==
+  dependencies:
+    ssh2-streams "~0.4.2"
+
 sshpk@^1.7.0:
   version "1.16.0"
   resolved "https://npm.cwserve.com/sshpk/-/sshpk-1.16.0.tgz#1d4963a2fbffe58050aa9084ca20be81741c07de"
@@ -6921,6 +6959,11 @@ stream-throttle@^0.1.3:
   dependencies:
     commander "^2.2.0"
     limiter "^1.0.5"
+
+streamsearch@~0.1.2:
+  version "0.1.2"
+  resolved "https://npm.cwserve.com/streamsearch/-/streamsearch-0.1.2.tgz#808b9d0e56fc273d809ba57338e929919a1a9f1a"
+  integrity sha1-gIudDlb8Jz2Am6VzOOkpkZoanxo=
 
 strict-uri-encode@^1.0.0:
   version "1.1.0"
@@ -7101,7 +7144,7 @@ tar@^2.0.0:
     fstream "^1.0.2"
     inherits "2"
 
-tar@^4:
+tar@^4, tar@^4.4.8:
   version "4.4.8"
   resolved "https://npm.cwserve.com/tar/-/tar-4.4.8.tgz#b19eec3fde2a96e64666df9fdb40c5ca1bc3747d"
   integrity sha512-LzHF64s5chPQQS0IYBn9IN5h3i98c12bo4NCO7e0sGM2llXQ3p2FGC5sdENN4cTW48O915Sh+x+EXx7XW96xYQ==
