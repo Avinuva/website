@@ -25,10 +25,10 @@ export default async function publish() {
       title: 'Commiting changes',
       task: () => git('commit', '-m', 'update page'),
     },
-    {
-      title: 'Deleleting old version',
-      task: () => git('push', '--progress', '--delete', 'git@github.com:netulip/website-frontend.git', 'gh-pages'),
-    },
+    // {
+    //   title: 'Deleleting old version',
+    //   task: () => git('push', '--progress', '--delete', 'git@github.com:netulip/website-frontend.git', 'gh-pages'),
+    // },
     {
       title: 'Pushing new version',
       task: () => git('push', '--progress' , '--force', 'git@github.com:netulip/website-frontend.git', 'master:gh-pages'),
