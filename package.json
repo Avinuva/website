@@ -8,7 +8,6 @@
   "devDependencies": {
     "@types/autoprefixer": "^9.1.1",
     "@types/browser-sync": "^0.0.42",
-    "@types/cheerio": "^0.22.10",
     "@types/cssnano": "^4.0.0",
     "@types/del": "^3.0.1",
     "@types/glob": "^7.1.1",
@@ -17,11 +16,11 @@
     "@types/gulp-imagemin": "^4.1.1",
     "@types/gulp-sass": "^0.0.31",
     "@types/gulp-sourcemaps": "^0.0.32",
+    "@types/listr": "^0.13.0",
     "@types/minimist": "^1.2.0",
     "@types/node": "^10.12.18",
     "autoprefixer": "^9.4.3",
     "browser-sync": "^2.26.3",
-    "cheerio": "^1.0.0-rc.2",
     "cssnano": "^4.1.8",
     "del": "^3.0.0",
     "dotenv": "^6.2.0",
@@ -35,6 +34,7 @@
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
+    "listr": "^0.14.3",
     "minimist": "^1.2.0",
     "node-sass": "^4.11.0",
     "postcss-preset-env": "^6.5.0",
@@ -52,7 +52,6 @@
   "dependencies": {
     "animejs": "^3.0.0",
     "charming": "^2.2.4",
-    "imagesloaded": "^4.1.4",
     "rellax": "^1.7.2"
   }
 }
