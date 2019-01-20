@@ -1,0 +1,1 @@
+{"version":3,"file":"polyfill.js","sources":["../../../source/scripts/polyfill.ts"],"sourcesContent":["document.documentElement.className = 'js'\n"],"names":[],"mappings":";;;CAAA,QAAQ,CAAC,eAAe,CAAC,SAAS,GAAG,IAAI,CAAA;;;;"}
